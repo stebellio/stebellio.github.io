@@ -18455,3 +18455,48 @@ blockquote p:last-child {
 .active-dark-version .form-group input, .active-dark-version .form-group label, .active-dark-version .form-group textarea {
     background: #000
 }
+
+.rn-slide.slider-style-01.banner-fixed-height.gbi--2094818613-8j7nvAPiHsocjXELjXsgCT:before,
+.rn-slide.slider-style-01.banner-fixed-height.gbi--2094818613-8j7nvAPiHsocjXELjXsgCT:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    transition: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.rn-slide.slider-style-01.banner-fixed-height.gbi--2094818613-8j7nvAPiHsocjXELjXsgCT:before {
+    z-index: -100;
+    background-image: url('https://wallpapercave.com/wp/wp6350571.jpg');
+
+    opacity: 1;
+}
+
+.rn-slide.slider-style-01.banner-fixed-height.gbi--2094818613-8j7nvAPiHsocjXELjXsgCT:after {
+    z-index: -101;
+
+    background-image: url('https://wallpapercave.com/wp/wp6350571.jpg');
+    opacity: 0;
+}
+
+.color-secondary {
+    color: orange;
+}
+
+.details-list {
+    color: #fff;
+    list-style-type: none;
+}
+
+.details-list .label {
+    margin-right: 60px;
+    margin-left: 10px;
+}
