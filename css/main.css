@@ -331,4 +331,7 @@ img {
 .form-group input:focus ~ label {
   border-radius: 5px;
 }
+.social-icons {
+  position: relative !important;
+}
 /*# sourceMappingURL=main.css.map */
