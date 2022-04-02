@@ -27,7 +27,7 @@
 }
 
 .progress-bar--1 .single-progress .progress {
-  background-color: rgba(182, 250, 198, 0.43) !important;
+  background-color: rgba(182, 250, 198, 0.23) !important;
 }
 
 footer {
@@ -48,10 +48,8 @@ footer {
 
 //Theme
 .theme {
-  width: 100%;
-  position: absolute;
-  top: 78%;
-  left: 30%;
+  display: flex;
+  justify-content: center;
 
   .switch {
     margin-top: 40px;
@@ -338,6 +336,10 @@ html {
   }
 }
 
+.single-timeline .inner {
+  background-color: #313131;
+}
+
 .active-light-version {
   .header-with-sidebar {
     background-color: white !important;
@@ -405,7 +407,7 @@ html {
     }
   }
 
-  input:focus {
+  input:focus, textarea:focus {
     border-color: @second-color !important;
   }
 
@@ -434,7 +436,26 @@ html {
     background-color: transparent !important;
   }
 
+  .single-timeline .inner {
+    background-color: unset;
+    box-shadow: 0 0 12px #cccccc;
+  }
+
+  textarea {
+    border: 1px solid #eeeeee !important;
+  }
+
 }
 
+.active-dark-version .form-group input, .active-dark-version .form-group label, .active-dark-version .form-group textarea {
+  background: #313131;
+}
 
+img {
+  vertical-align: unset;
+}
 
+.form-group textarea:focus ~ label,
+.form-group input:focus ~ label {
+  border-radius: 5px;
+}
