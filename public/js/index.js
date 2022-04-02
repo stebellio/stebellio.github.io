@@ -1,3 +1,5 @@
+
+
 $('.top').click(() => {
     window.location.href = "#home";
 });
@@ -9,6 +11,44 @@ let tiers = [
 ];
 
 let counter = 0;
+const darkMode = $('#dark-mode');
+
+let static_theme = false;
+
+const lightModeToggle = (enabled) => {
+    const mainContainer = $('#wrapper-container');
+    const unict = $('#unict-image');
+    const intrapresa = $('#intrapresa-image');
+
+    mainContainer.removeClass('active-dark-version');
+    mainContainer.addClass('active-light-version');
+
+    if (enabled) {
+        mainContainer.removeClass('active-dark-version');
+        mainContainer.addClass('active-light-version');
+        unict.attr('src', 'img/unict-light.png');
+        intrapresa.attr('src', 'img/intrapresa-light.jpeg');
+    }
+    else {
+        mainContainer.addClass('active-dark-version');
+        mainContainer.removeClass('active-light-version');
+        unict.attr('src', 'img/unict.png');
+        intrapresa.attr('src', 'img/intrapresa.svg');
+    }
+
+}
+
+const themeFromSystem = () => {
+    if (prefersDarkScheme.matches) {
+        darkMode.prop('checked', false);
+        lightModeToggle(false);
+    } else {
+        darkMode.prop('checked', true);
+        lightModeToggle(true);
+    }
+}
+
+
 
 setInterval(() => {
     tier.fadeOut(() => {
@@ -49,22 +89,17 @@ $('.card-toggle').click((e) => {
     $('#' + e.currentTarget.id + '-description').removeClass('hidden');
 });
 
-$('#dark-mode').click(() => {
-
-    const mainContainer = $('#wrapper-container');
-    const unict = $('#unict-image');
-    const intrapresa = $('#intrapresa-image');
-
-    if ($('#dark-mode').prop('checked')) {
-        mainContainer.removeClass('active-dark-version');
-        mainContainer.addClass('active-light-version');
-        unict.attr('src', 'img/unict-light.png');
-        intrapresa.attr('src', 'img/intrapresa-light.jpeg');
-    }
-    else {
-        mainContainer.addClass('active-dark-version');
-        mainContainer.removeClass('active-light-version');
-        unict.attr('src', 'img/unict.png');
-        intrapresa.attr('src', 'img/intrapresa.svg');
-    }
+darkMode.click(() => {
+    lightModeToggle($('#dark-mode').prop('checked'));
+    static_theme = true;
 });
+
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+setInterval(() => {
+    if (!static_theme) {
+        themeFromSystem();
+    }
+}, 500);
+
+themeFromSystem();

@@ -26,6 +26,26 @@
   margin-top: unset !important;
 }
 
+.progress-bar--1 .single-progress .progress {
+  background-color: rgba(182, 250, 198, 0.43) !important;
+}
+
+footer {
+  background-color: @main-color !important;
+  .copyright-text {
+    color: white !important;
+  }
+
+  .top:after {
+    border-bottom: 8px solid white !important;
+  }
+
+}
+
+.top {
+  background-color: @dark-color !important;
+}
+
 //Theme
 .theme {
   width: 100%;
@@ -34,6 +54,7 @@
   left: 30%;
 
   .switch {
+    margin-top: 40px;
     position: relative;
     display: inline-block;
     width: 90px;
@@ -74,7 +95,7 @@
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 10px;
+    border-radius: 7.5rem;
 
     &:before {
       position: absolute;
@@ -89,7 +110,7 @@
       font-size: 12px;
       padding-top: 3px;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 7.5rem;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -373,7 +394,9 @@ html {
   }
 
   .subtitle {
-    color: @second-color !important;
+    span {
+      color: @second-color !important;
+    }
   }
 
   .time {
@@ -406,6 +429,11 @@ html {
       color: @second-color !important;
     }
   }
+
+  .top {
+    background-color: transparent !important;
+  }
+
 }
 
 
