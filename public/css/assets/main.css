@@ -18473,20 +18473,6 @@ blockquote p:last-child {
 
 }
 
-.rn-slide.slider-style-01.banner-fixed-height.gbi--2094818613-8j7nvAPiHsocjXELjXsgCT:before {
-    z-index: -100;
-    background-image: url('https://wallpapercave.com/wp/wp6350571.jpg');
-
-    opacity: 1;
-}
-
-.rn-slide.slider-style-01.banner-fixed-height.gbi--2094818613-8j7nvAPiHsocjXELjXsgCT:after {
-    z-index: -101;
-
-    background-image: url('https://wallpapercave.com/wp/wp6350571.jpg');
-    opacity: 0;
-}
-
 .color-secondary {
     color: orange;
 }
@@ -18499,4 +18485,8 @@ blockquote p:last-child {
 .details-list .label {
     margin-right: 60px;
     margin-left: 10px;
+}
+
+.rn-button {
+    cursor: pointer;
 }
