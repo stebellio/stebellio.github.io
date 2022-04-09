@@ -50,7 +50,7 @@ footer {
 .theme {
   width: 100%;
   position: absolute;
-  top: 78%;
+  top: 75%;
   left: 30%;
 
   .switch {
@@ -96,6 +96,11 @@ footer {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 7.5rem;
+    outline: none;
+
+    &:focus-visible {
+      outline: none !important;
+    }
 
     &:before {
       position: absolute;
@@ -133,6 +138,7 @@ footer {
     background-color: @card-background-color;
     border-radius: 5px;
     font-family: Montserrat, sans-serif;
+    max-width: 500px;
 
     pre {
       background-color: unset;
@@ -438,3 +444,35 @@ html {
 
 
 
+@media only screen and (max-width: 1000px) {
+  #portfolio {
+    .col-lg-6.col-md-12.col-12 {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .thumbnail {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 300px!important;
+  }
+
+  #ts-description,
+  #php-description,
+  #java-description {
+    font-size: 7px !important;
+  }
+
+}
+
+.header-right {
+  .theme {
+    position: unset;
+  }
+}

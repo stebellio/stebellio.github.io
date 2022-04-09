@@ -29,7 +29,7 @@ footer .top:after {
 .theme {
   width: 100%;
   position: absolute;
-  top: 78%;
+  top: 75%;
   left: 30%;
 }
 .theme .switch {
@@ -70,6 +70,10 @@ footer .top:after {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 7.5rem;
+  outline: none;
+}
+.theme .slider:focus-visible {
+  outline: none !important;
 }
 .theme .slider:before {
   position: absolute;
@@ -98,6 +102,7 @@ footer .top:after {
   background-color: #e7faea;
   border-radius: 5px;
   font-family: Montserrat, sans-serif;
+  max-width: 500px;
 }
 .thumbnail .card pre {
   background-color: unset;
@@ -309,5 +314,27 @@ html {
 }
 .active-light-version .top {
   background-color: transparent !important;
+}
+@media only screen and (max-width: 1000px) {
+  #portfolio .col-lg-6.col-md-12.col-12 {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .thumbnail {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    max-width: 300px!important;
+  }
+  #ts-description,
+  #php-description,
+  #java-description {
+    font-size: 7px !important;
+  }
+}
+.header-right .theme {
+  position: unset;
 }
 /*# sourceMappingURL=main.css.map */

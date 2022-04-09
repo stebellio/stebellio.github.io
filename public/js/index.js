@@ -12,6 +12,7 @@ let tiers = [
 
 let counter = 0;
 const darkMode = $('#dark-mode');
+const darkModeMobile = $('#dark-mode-mobile');
 
 let static_theme = false;
 
@@ -22,6 +23,8 @@ const lightModeToggle = (enabled) => {
 
     mainContainer.removeClass('active-dark-version');
     mainContainer.addClass('active-light-version');
+
+    console.log(enabled);
 
     if (enabled) {
         mainContainer.removeClass('active-dark-version');
@@ -41,14 +44,14 @@ const lightModeToggle = (enabled) => {
 const themeFromSystem = () => {
     if (prefersDarkScheme.matches) {
         darkMode.prop('checked', false);
+        darkModeMobile.prop('checked', false);
         lightModeToggle(false);
     } else {
         darkMode.prop('checked', true);
+        darkModeMobile.prop('checked', true);
         lightModeToggle(true);
     }
 }
-
-
 
 setInterval(() => {
     tier.fadeOut(() => {
@@ -93,6 +96,11 @@ darkMode.click(() => {
     lightModeToggle($('#dark-mode').prop('checked'));
     static_theme = true;
 });
+
+darkModeMobile.click(() => {
+    lightModeToggle($('#dark-mode-mobile').prop('checked'));
+    static_theme = true;
+})
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 

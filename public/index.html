@@ -105,6 +105,8 @@
                     </div>
                 </div>
             </header>
+
+
             <header class="rn-header header-default header-transparent d-block d-xl-none">
                 <div class="header-inner">
                     <div class="header-left">
@@ -115,10 +117,11 @@
                         </a></div>
                     </div>
                     <div class="header-right">
-                        <div class="hambergur-menu">
-                            <div class="hamburger-box">
-                                <div class="hamburger-inner"></div>
-                            </div>
+                        <div class="theme">
+                            <label class="switch">
+                                <input id="dark-mode-mobile" type="checkbox">
+                                <span class="slider"></span>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -209,7 +212,7 @@
                                                          11     <code>this.degree = "<strong>Computer Engineering</strong>";</code>
                                                          12   }
                                                          13
-                                                         14   <code>async getInTouch() { <a class="clickme" href="#contact">this.clickMe</a> }</code>
+                                                         14   <code>async getInTouch() { <a class="clickme" href="#contact">this.clickMe()</a> }</code>
                                                          15 }
                                             </pre>
                                             <pre id="php-description" class="hidden">
@@ -226,7 +229,7 @@
                                                          11     <code>$this->degree = "<strong>Computer Engineering</strong>";</code>
                                                          12   }
                                                          13
-                                                         14   <code>public function getInTouch() { <a class="clickme" href="#contact">$this->clickMe</a> }</code>
+                                                         14   <code>public function getInTouch() { <a class="clickme" href="#contact">$this->clickMe()</a> }</code>
                                                          15 }
                                             </pre>
                                             <pre id="java-description" class="hidden">
@@ -243,7 +246,7 @@
                                                          11     <code>super.degree = "<strong>Computer Engineering</strong>";</code>
                                                          12   <code>}</code>
                                                          13
-                                                         14   <code>public <strong>void</strong> getInTouch() { <a class="clickme" href="#contact">return super.clickMe</a> }</code>
+                                                         14   <code>public <strong>void</strong> getInTouch() { <a class="clickme" href="#contact">return super.clickMe()</a> }</code>
                                                          15 }
                                             </pre>
                                             <div class="card-footer">
@@ -414,7 +417,7 @@
                                             <div class="inner">
                                                 <div class="time"><span>2020 - In corso</span></div>
                                                 <div class="envato-images gatsby-image-wrapper"
-                                                     style="position:relative;overflow:hidden;display:inline-block;width:111px;height:21px">
+                                                     style="position:relative;overflow:hidden;display:inline-block;width:111px;height:25px">
                                                     <a href="https://www.intrapresa-it.it">
                                                         <img id="intrapresa-image" aria-hidden="true" src="img/intrapresa.svg"
                                                              alt="Intrapresa">
