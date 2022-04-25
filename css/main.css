@@ -96,6 +96,7 @@ footer .top:after {
   background-color: #e7faea;
   border-radius: 5px;
   font-family: Montserrat, sans-serif;
+  width: 500px;
 }
 .thumbnail .card pre {
   background-color: unset;
@@ -242,6 +243,15 @@ html {
 .single-timeline .inner {
   background-color: #313131;
 }
+.single-timeline .inner a[href] {
+  color: #00adef;
+}
+.active-light-version .fa-brands {
+  color: #6A98F0;
+}
+.active-light-version .fa-brands:hover {
+  color: #66b95c;
+}
 .active-light-version .header-with-sidebar {
   background-color: white !important;
   box-shadow: 0 0 12px #cccccc !important;
@@ -333,5 +343,37 @@ img {
 }
 .social-icons {
   position: relative !important;
+}
+.social-icons i:hover {
+  transform: scale(1.3);
+  transition: linear 150ms;
+}
+.single-timeline .inner {
+  min-height: 500px;
+}
+.job {
+  margin-top: 20px;
+}
+.brand i:hover {
+  transform: scale(1.2);
+  transition: linear 150ms;
+}
+@media screen and (max-width: 1000px) {
+  .brand {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+  }
+  .progress-bar--1 {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .thumbnail .card {
+    width: 350px !important;
+  }
+  .thumbnail .card pre {
+    font-size: 0.9rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

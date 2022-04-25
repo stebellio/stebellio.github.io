@@ -1,5 +1,3 @@
-
-
 $('.top').click(() => {
     window.location.href = "#home";
 });
@@ -12,6 +10,7 @@ let tiers = [
 
 let counter = 0;
 const darkMode = $('#dark-mode');
+const darkModeMobile = $('#dark-mode-mobile');
 
 let static_theme = false;
 
@@ -89,9 +88,10 @@ $('.card-toggle').click((e) => {
     $('#' + e.currentTarget.id + '-description').removeClass('hidden');
 });
 
-darkMode.click(() => {
-    lightModeToggle($('#dark-mode').prop('checked'));
-    static_theme = true;
+darkMode.click(themeButtonClickEvent);
+darkModeMobile.click(() => {
+    darkMode.prop('checked', darkModeMobile.prop('checked'));
+    themeButtonClickEvent();
 });
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -103,3 +103,18 @@ setInterval(() => {
 }, 500);
 
 themeFromSystem();
+
+$('button[type="submit"]').click((e) => {
+    e.preventDefault();
+
+    let name = $('#name').val();
+    let subject = $('#subject').val();
+    let message = $('#message').val();
+
+    window.location.href = `mailto:stefano.bellioo@gmail.com?subject=${subject}&body=${message}`;
+});
+
+function themeButtonClickEvent() {
+    lightModeToggle(darkMode.prop('checked'));
+    static_theme = true;
+}

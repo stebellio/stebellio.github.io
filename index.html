@@ -7,9 +7,9 @@
     <title>Stefano Bellio</title>
     <!--    <link rel="icon" href="/favicon-32x32.png">-->
     <meta name="theme-color" content="#111">
-    <link rel="stylesheet" href="css/assets/font-awesome.min.css">
     <link rel="stylesheet" href="css/assets/main.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/assets/fontawesome/css/all.min.css">
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -51,28 +51,28 @@
                                 <li>
                                     <a class="nav-link menu-hover-link" href="#about">
                                         <span class="hover-item">
-                                            <span data-text="About">About</span>
+                                            <span data-text="Chi sono">Chi sono</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link menu-hover-link" href="#service">
                                         <span class="hover-item">
-                                            <span data-text="Services">Services</span>
+                                            <span data-text="Cosa Faccio">Cosa Faccio</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link menu-hover-link" href="#portfolio">
                                         <span class="hover-item">
-                                            <span data-text="Portfolio">Portfolio</span>
+                                            <span data-text="Il mio percorso">Il mio percorso</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="nav-link menu-hover-link" href="#contact">
                                         <span class="hover-item">
-                                            <span data-text="Contact">Contact</span>
+                                            <span data-text="Contattami">Contattami</span>
                                         </span>
                                     </a>
                                 </li>
@@ -84,22 +84,22 @@
                         <ul class="social-icons">
                             <li>
                                 <a href="https://www.facebook.com/stefano.bellio.10" target="_blank">
-                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa-brands fa-facebook"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/ste.bellio/" target="_blank">
-                                    <i class="fa fa-instagram"></i>
+                                    <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/in/stefano-bellio-b4b3811a0/" target="_blank">
-                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://github.com/stebellio" target="_blank">
-                                    <i class="fa fa-github"></i>
+                                    <i class="fa-brands fa-github"></i>
                                 </a>
                             </li>
                         </ul>
@@ -116,10 +116,11 @@
                         </a></div>
                     </div>
                     <div class="header-right">
-                        <div class="hambergur-menu">
-                            <div class="hamburger-box">
-                                <div class="hamburger-inner"></div>
-                            </div>
+                        <div class="theme">
+                            <label for="dark-mode-mobile" class="switch">
+                                <input id="dark-mode-mobile" type="checkbox">
+                                <span class="slider"></span>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -195,7 +196,7 @@
                             <div class="row mt--60 mb--30 row--25">
                                 <div class="col-lg-6 col-md-12 col-12">
                                     <div class="thumbnail">
-                                        <div class="card" style="width: 500px; height: 580px">
+                                        <div class="card">
                                             <pre id="ts-description">
                                                          1 <code>class <strong>Me</strong> extends <strong>Person</strong> {</code>
                                                          2   <code>constructor() {</code>
@@ -266,10 +267,8 @@
                                                 </h3>
 
                                                 <p class="description">Ciao! Mi chiamo <span class="color-primary">Stefano Bellio</span>.
-                                                    I am a Web Developer, and I'm very passionate and dedicated to my
-                                                    work. With 20 years experience as a professional Web developer, I
-                                                    have acquired the skills and knowledge necessary to make your
-                                                    project a success.
+                                                    Sono un programmatore | sviluppatore web | ingegnere del software e grazie alla passione ed alla dedizione verso il settore della programmazione
+                                                    sono stato in grado, in breve tempo, di maturare le abilità necessarie alla creazione di piattaforme web ed applicazioni professionali.
                                                 </p>
                                             </div>
                                             <div class="button-group mt--20">
@@ -306,7 +305,7 @@
                                             </div>
                                             <h4>Software Engineer</h4>
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Progettazione, sviluppo e aggiornamento di progetti software.
                                             </p>
                                         </div>
                                     </div>
@@ -317,18 +316,20 @@
                                             </div>
                                             <h4>Backend Developer</h4>
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Manipolazione e gestione di dati tramite database relazionali e creazione di serivizi api REST
+                                                tramite i linguaggi più moderni.
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-12">
                                         <div id="frontend" class="service service-style-2">
                                             <div class="icon">
-                                                <i class="fa fa-html5 fa-3x"></i>
+                                                <i class="fa-brands fa-html5 fa-3x"></i>
                                             </div>
                                             <h4>Frontend Developer</h4>
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Progettazione di UI | UX moderne ed intuitive tramite HTML & CSS
+                                                o framework JS.
                                             </p>
                                         </div>
                                     </div>
@@ -339,13 +340,48 @@
                             <div class="container">
                                 <div class="row row--30">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="left-content"><h3 class="title">In breve <span class="theme-color">tempo</span>,
-                                            sono stato in grado di crescere e maturare diverse competenze in varie aree
-                                            dello sviluppo software.</h3>
-                                            <p class="description">I provide cost-effective and high quality products to
-                                                meet our Clients’ needs of timely delivery World Wide. I want to be
-                                                local in a global world to be where our Customers need our services
-                                                customers need our services.</p></div>
+                                        <div class="left-content">
+                                            <h3 class="title">Le mie <span class="theme-color">competenze</span>
+                                                in varie aree dello sviluppo software.
+                                            </h3>
+                                            <br>
+                                            <div class="row">
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-html5 fa-5x" style="color: #e96228"></i>
+                                                </div>
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-css3 fa-5x" style="color: #2862e9"></i>
+                                                </div>
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-js fa-5x" style="color: #efd81d"></i>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-php fa-5x" style="color: #838dba"></i>
+                                                </div>
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-node-js fa-5x" style="color: #5e905c"></i>
+                                                </div>
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-java fa-5x" style="color: #e32c2d"></i>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-aws fa-5x" style="color: #ff9700"></i>
+                                                </div>
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-docker fa-5x" style="color: #2392e6"></i>
+                                                </div>
+                                                <div class="brand col-lg-4">
+                                                    <i class="fa-brands fa-wordpress fa-5x" style="color: #21759b"></i>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12 mt_sm--30">
                                         <div class="progressbar-area">
@@ -353,19 +389,20 @@
                                                 <div class="single-progress">
                                                     <h6 class="title">HTML & CSS</h6>
                                                     <div class="progress">
+                                                        <div role="progressbar" class="progress-bar" style="width:70%"
+                                                             aria-valuenow="70" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                    <span class="label">70%</span>
+                                                </div>
+                                                <div class="single-progress">
+                                                    <h6 class="title">Javascript</h6>
+                                                    <div class="progress">
                                                         <div role="progressbar" class="progress-bar" style="width:90%"
                                                              aria-valuenow="90" aria-valuemin="0"
                                                              aria-valuemax="100"></div>
                                                     </div>
                                                     <span class="label">90%</span>
-                                                </div>
-                                                <div class="single-progress"><h6 class="title">NodeJS & Typescript</h6>
-                                                    <div class="progress">
-                                                        <div role="progressbar" class="progress-bar" style="width:81%"
-                                                             aria-valuenow="81" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="label">81%</span>
                                                 </div>
                                                 <div class="single-progress">
                                                     <h6 class="title">PHP</h6>
@@ -376,20 +413,44 @@
                                                     </div>
                                                     <span class="label">95%</span>
                                                 </div>
+                                                <div class="single-progress"><h6 class="title">NodeJS & Typescript</h6>
+                                                    <div class="progress">
+                                                        <div role="progressbar" class="progress-bar" style="width:65%"
+                                                             aria-valuenow="65" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                    <span class="label">65%</span>
+                                                </div>
+                                                <div class="single-progress"><h6 class="title">Java</h6>
+                                                    <div class="progress">
+                                                        <div role="progressbar" class="progress-bar" style="width:15%"
+                                                             aria-valuenow="15" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                    <span class="label">15%</span>
+                                                </div>
                                                 <div class="single-progress"><h6 class="title">Amazon Web Services</h6>
+                                                    <div class="progress">
+                                                        <div role="progressbar" class="progress-bar" style="width:10%"
+                                                             aria-valuenow="10" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                    <span class="label">10%</span></div>
+                                                <div class="single-progress"><h6 class="title">Docker</h6>
+                                                    <div class="progress">
+                                                        <div role="progressbar" class="progress-bar" style="width:85%"
+                                                             aria-valuenow="85" aria-valuemin="0"
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                    <span class="label">85%</span>
+                                                </div>
+                                                <div class="single-progress"><h6 class="title">Wordpress</h6>
                                                     <div class="progress">
                                                         <div role="progressbar" class="progress-bar" style="width:50%"
                                                              aria-valuenow="50" aria-valuemin="0"
                                                              aria-valuemax="100"></div>
                                                     </div>
-                                                    <span class="label">50%</span></div>
-                                                <div class="single-progress"><h6 class="title">Wordpress</h6>
-                                                    <div class="progress">
-                                                        <div role="progressbar" class="progress-bar" style="width:75%"
-                                                             aria-valuenow="75" aria-valuemin="0"
-                                                             aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="label">75%</span>
+                                                    <span class="label">50%</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -416,31 +477,39 @@
                                                 <div class="time"><span>2020 - In corso</span></div>
                                                 <div class="envato-images gatsby-image-wrapper"
                                                      style="position:relative;display:inline-block;width:111px;height:21px">
-                                                    <a href="https://www.intrapresa-it.it">
+                                                    <a href="https://www.intrapresa-it.it" target="_blank">
                                                         <img id="intrapresa-image" aria-hidden="true" src="img/intrapresa.svg"
                                                              alt="Intrapresa">
                                                     </a>
                                                 </div>
                                                 <span class="job">Full Stack Developer</span>
-                                                <p>With 20 years experience as a professional Web developer, I have
-                                                    acquired the skills and knowledge necessary to make your project a
-                                                    success.</p></div>
+                                                <p>
+                                                    Attualmente fullstack developer presso <a href="http://www.intrapresa-it.it" target="_blank">Intrapresa S.r.l</a>, software house leader
+                                                    nello sviluppo di applicativi all'interno del settore carburante.
+                                                    Mi occupo, in particolare, dello sviluppo interno di API e della creazione di software gestionali per i clienti, nonché della gestione dei server
+                                                    tramite <a href="https://aws.amazon.com" target="_blank">AWS</a> e <a href="https://www.docker.com" target="_blank">Docker</a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <div class="single-timeline">
                                             <div class="inner">
                                                 <div class="time"><span>2015 - 2020</span></div>
-                                                <div class="envato-images gatsby-image-wrapper">
-                                                    <a href="https://www.unict.it">
+                                                <div class="envato-images gatsby-image-wrapper"
+                                                     style="position:relative;display:inline-block;width:111px;height:21px">
+                                                    <a href="https://www.unict.it" target="_blank">
                                                         <img id="unict-image" aria-hidden="true" src="img/unict.png"
-                                                             alt="Intrapresa" width="150">
+                                                             alt="Intrapresa" width="100">
                                                     </a>
                                                 </div>
-                                                <span class="job">Web Developer</span>
-                                                <p>With 20 years experience as a professional Web developer, I have
-                                                    acquired the skills and knowledge necessary to make your project a
-                                                    success.</p></div>
+                                                <span class="job">Corso di laurea in Ingegneria Informatica</span>
+                                                <p>
+                                                    Ho conseguito la laurea presso l'ateneo dell' <a href="https://www.unict.it" target="_blank">Università di Catania</a>,
+                                                    dove ho potuto apprendere le basi dello sviluppo software, dell'architettura delle reti e dei sistemi informatici ... e anche
+                                                    un pò di fisica.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -455,9 +524,10 @@
                                 <div class="col-lg-12">
                                     <div class="section-title mb--30"><span class="subtitle">CONTATTI</span>
                                         <h2 class="title">Scrivimi in privato</h2>
-                                        <p class="description mt--75 mt_sm--30 mt_md--30">Please fill out the form on
-                                            this section to contact with me. Or call <br> between 9:00 a.m. and 8:00
-                                            p.m. ET, Monday through Friday</p></div>
+                                        <p class="description mt--75 mt_sm--30 mt_md--30">
+                                            Compila il form in questa sezione per contattarmi.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -465,8 +535,8 @@
                                     <form>
                                         <div class="form-group  "><input type="text" name="name" id="name"><label
                                                 for="name">Nome completo</label></div>
-                                        <div class="form-group  "><input type="email" name="email" id="email"><label
-                                                for="email">Inserisci la tua Email</label></div>
+<!--                                        <div class="form-group  "><input type="email" name="email" id="email"><label-->
+<!--                                                for="email">Inserisci la tua Email</label></div>-->
                                         <div class="form-group  "><input type="text" name="subject" id="subject"><label
                                                 for="subject">Oggetto</label></div>
                                         <div class="form-group  "><textarea name="message"
