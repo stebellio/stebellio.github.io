@@ -39,11 +39,11 @@ const lightModeToggle = (enabled) => {
 
 const themeFromSystem = () => {
     if (prefersDarkScheme.matches) {
-        darkMode.prop('checked', false);
-        lightModeToggle(false);
-    } else {
         darkMode.prop('checked', true);
         lightModeToggle(true);
+    } else {
+        darkMode.prop('checked', false);
+        lightModeToggle(false);
     }
 }
 
@@ -107,7 +107,6 @@ themeFromSystem();
 $('button[type="submit"]').click((e) => {
     e.preventDefault();
 
-    let name = $('#name').val();
     let subject = $('#subject').val();
     let message = $('#message').val();
 
