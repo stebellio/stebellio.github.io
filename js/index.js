@@ -1,53 +1,17 @@
-$('.top').click(() => {
-    window.location.href = "#home";
-});
-
 const tier = $('#tier');
+const mainContainer = $('#wrapper-container');
+const unict = $('#unict-image');
+const intrapresa = $('#intrapresa-image');
 let tiers = [
     'Software Engineer',
     'Web Developer'
 ];
 
 let counter = 0;
-const darkMode = $('#dark-mode');
-const darkModeMobile = $('#dark-mode-mobile');
-
-let static_theme = false;
-
-const lightModeToggle = (enabled) => {
-    const mainContainer = $('#wrapper-container');
-    const unict = $('#unict-image');
-    const intrapresa = $('#intrapresa-image');
-
-    mainContainer.removeClass('active-dark-version');
-    mainContainer.addClass('active-light-version');
-
-    if (enabled) {
-        mainContainer.removeClass('active-dark-version');
-        mainContainer.addClass('active-light-version');
-        unict.attr('src', 'img/unict-light.png');
-        intrapresa.attr('src', 'img/intrapresa-light.jpeg');
-    }
-    else {
-        mainContainer.addClass('active-dark-version');
-        mainContainer.removeClass('active-light-version');
-        unict.attr('src', 'img/unict.png');
-        intrapresa.attr('src', 'img/intrapresa.svg');
-    }
-
-}
-
-const themeFromSystem = () => {
-    if (prefersDarkScheme.matches) {
-        darkMode.prop('checked', true);
-        lightModeToggle(true);
-    } else {
-        darkMode.prop('checked', false);
-        lightModeToggle(false);
-    }
-}
-
-
+window.matchMedia("(prefers-color-scheme: dark)").matches ? darkMode() : lightMode();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    event.matches ? darkMode() : lightMode();
+});
 
 setInterval(() => {
     tier.fadeOut(() => {
@@ -88,22 +52,6 @@ $('.card-toggle').click((e) => {
     $('#' + e.currentTarget.id + '-description').removeClass('hidden');
 });
 
-darkMode.click(themeButtonClickEvent);
-darkModeMobile.click(() => {
-    darkMode.prop('checked', darkModeMobile.prop('checked'));
-    themeButtonClickEvent();
-});
-
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-setInterval(() => {
-    if (!static_theme) {
-        themeFromSystem();
-    }
-}, 500);
-
-themeFromSystem();
-
 $('button[type="submit"]').click((e) => {
     e.preventDefault();
 
@@ -113,7 +61,22 @@ $('button[type="submit"]').click((e) => {
     window.location.href = `mailto:stefano.bellioo@gmail.com?subject=${subject}&body=${message}`;
 });
 
-function themeButtonClickEvent() {
-    lightModeToggle(darkMode.prop('checked'));
-    static_theme = true;
+$('.top').click(() => {
+    window.location.href = "#home";
+});
+
+function lightMode() {
+    console.log('Light Mode On');
+    mainContainer.removeClass('active-dark-version');
+    mainContainer.addClass('active-light-version');
+    unict.attr('src', 'img/unict-light.png');
+    intrapresa.attr('src', 'img/intrapresa-light.jpeg');
+}
+
+function darkMode() {
+    console.log('Dark Mode On')
+    mainContainer.addClass('active-dark-version');
+    mainContainer.removeClass('active-light-version');
+    unict.attr('src', 'img/unict.png');
+    intrapresa.attr('src', 'img/intrapresa.svg');
 }
