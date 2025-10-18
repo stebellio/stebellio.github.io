@@ -65,6 +65,8 @@ $('.top').click(() => {
     window.location.href = "#home";
 });
 
+$('#year').text(new Date().getFullYear());
+
 function lightMode() {
     console.log('Light Mode On');
     mainContainer.removeClass('active-dark-version');
