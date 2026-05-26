@@ -3,8 +3,8 @@ const mainContainer = $('#wrapper-container');
 const unict = $('#unict-image');
 const intrapresa = $('#intrapresa-image');
 let tiers = [
+    'Backend Engineer',
     'Software Engineer',
-    'Web Developer'
 ];
 
 let counter = 0;

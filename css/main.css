@@ -115,9 +115,6 @@ footer .top:after {
 .thumbnail .card #php-description {
   color: #793862;
 }
-.thumbnail .card #java-description {
-  color: red;
-}
 .thumbnail .card .card-footer {
   display: flex;
   width: 100%;
@@ -141,12 +138,6 @@ footer .top:after {
 }
 .thumbnail .card .card-footer #php:hover {
   color: #793862;
-}
-.thumbnail .card .card-footer #java.active {
-  color: red;
-}
-.thumbnail .card .card-footer #java:hover {
-  color: red;
 }
 .progress-bar {
   border-radius: 5px;
